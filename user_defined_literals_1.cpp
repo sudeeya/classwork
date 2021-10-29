@@ -1,0 +1,1 @@
+#include <iostream>int operator"" _b(const char* bin, size_t size) {	int dec = 0, power_of_two = 1;	for (size_t i = 0; i < size; ++i) {		if (bin[size - 1 - i] == '1') {			dec += power_of_two;		}		power_of_two *= 2;	}	return dec;}int main() {	auto a = 20 + "11010"_b;	std::cout << a;}
